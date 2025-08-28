@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沈文煜 (Wen-Yu Shen) | 一位溫和的改革者</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1f2937', // 深藍灰 (原 gray-800)
+                        'deep-navy': '#111827', // 更深的藍灰 (原 gray-900)
+                        'amber-accent': '#f59e0b', // 琥珀色 (amber-500)
+                        'amber-dark': '#d97706', // 深琥珀色 (amber-600)
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        }
+        /* Style for active nav link */
+        .nav-link-active {
+            color: #f59e0b; /* amber-500 */
+            font-weight: 700;
+        }
+        /* Custom styles for section transitions */
+        section {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-700">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-gray-900">沈文煜</a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-gray-600 hover:text-amber-accent transition-colors">首頁</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-amber-accent transition-colors">關於我</a>
+                <a href="#stories" class="nav-link text-gray-600 hover:text-amber-accent transition-colors">關鍵故事集</a>
+                <a href="#competencies" class="nav-link text-gray-600 hover:text-amber-accent transition-colors">核心能力</a>
+                <a href="#vision" class="nav-link text-gray-600 hover:text-amber-accent transition-colors">我的願景</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-amber-accent transition-colors">聯絡我</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-accent">首頁</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-accent">關於我</a>
+                <a href="#stories" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-accent">關鍵故事集</a>
+                <a href="#competencies" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-accent">核心能力</a>
+                <a href="#vision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-accent">我的願景</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-amber-accent">聯絡我</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Home with Banner -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop');">
+            <!-- Overlay for better text readability -->
+            <div class="absolute inset-0 bg-deep-navy opacity-60"></div>
+            
+            <!-- Content -->
+            <div class="relative z-10 container mx-auto px-6 py-16 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <img src="https://i.meee.com.tw/W6yzeQC.jpg" alt="沈文煜的個人照片" class="w-64 h-64 rounded-full mx-auto mb-8 shadow-lg object-cover object-top border-4 border-white/50">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white">沈文煜 (Wen-Yu Shen)</h1>
+                    <h2 class="text-2xl md:text-3xl text-amber-accent mt-2">一位溫和的改革者</h2>
+                    <p class="mt-6 text-lg text-gray-200 leading-relaxed">
+                        你好，我是文煜。我相信，真正且持久的改變，始於對「系統」的深刻理解與對「人」的真誠關懷。
+                    </p>
+                    <p class="mt-4 text-lg text-gray-200 leading-relaxed">
+                        我樂於走進複雜的結構中，傾聽其中的聲音，洞察表象之下的真實痛點。我的熱情在於建立共識、設計更完善的運作模式，並用溫暖而堅定的方式，陪伴團隊一起走向更好的地方。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: About Me -->
+        <section id="about" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">我的探索之路：從工程師到引路人</h2>
+                    <p class="text-center text-slate-600 mb-12">我一直認為，人生就像「摸著石頭過河」，沒有絕對正確的道路，只有親自踏出的每一步，才能匯聚成自己的方向。我的跨領域旅程，正是這份信念最深刻的實踐。</p>
+                    
+                    <div class="grid md:grid-cols-5 gap-12 items-center">
+                        <div class="md:col-span-3 space-y-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-amber-dark mb-2">意外的啟蒙：在電機系找到人文的種子</h3>
+                                <p class="text-slate-700 leading-relaxed">我大學時主修電機工程，沉浸在理性的邏輯與電路之中。然而，真正點燃我內心火花的，卻是課堂外的世界——在辯論社學習思辨、在系學會管理財務、在學生議會推動制度。在那些充滿對話、衝突與合作的場景裡，我發現自己對「系統如何運作」以及「人在系統中的感受」有著強烈的熱情。這些經歷像一顆顆種子，讓我意識到，比起與機器對話，我更渴望與人連結。</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-amber-dark mb-2">勇敢的轉向：從法律中尋找改變社會的工具</h3>
+                                <p class="text-slate-700 leading-relaxed">這份覺察，引導我做出了當時看來最大膽的決定：碩士班轉向法律領域。我一頭鑽進公司法與企業社會責任(CSR)的研究中，試圖從理論的制高點，理解一個組織、一個社會該如何建立更公平、更永續的制度。那是一段從零開始的艱苦旅程，但也正是在反覆閱讀、思辨、寫作的磨礪中，我學會了如何從海量資訊中提煉洞見，並建立屬於自己的觀點。</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <img src="https://i.meee.com.tw/hiOVZLz.png" alt="高空跳傘的生活照" class="rounded-lg shadow-xl w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <blockquote class="mt-12 p-6 bg-amber-50 border-l-4 border-amber-500 text-amber-900 rounded-r-lg">
+                        <p class="text-lg italic">"人生道路有千萬條，沒有嘗試過，永遠不會知道自己的感受。在摸索的初期，必須要嘗試和屏棄一些不適合的石頭，才能慢慢找到適合的路，穩穩走到對岸。"</p>
+                    </blockquote>
+
+                    <div class="mt-12">
+                        <h3 class="text-xl font-bold text-amber-dark mb-2">成為燈塔：我的現在與未來</h3>
+                        <p class="text-slate-700 leading-relaxed">從學生議會的實踐，到碩士論文的理論，再到職場的體驗，這一路摸索，讓我更加確立了我的「志業」——成為一位引路人與燈塔。我希望運用過去所有「摸著石頭過河」的經驗，陪伴那些同樣在十字路口感到徬徨的個人或團隊，為他們提供安心的力量，並一起找到前進的方向。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Key Stories -->
+        <section id="stories" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">我的故事，我的實踐</h2>
+                <p class="text-center text-slate-600 max-w-2xl mx-auto mb-16">這裡的每一個故事，都是我「溫和改革」理念的一次印證。</p>
+                
+                <div class="space-y-16">
+                    <!-- Story 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <h3 class="text-2xl font-bold mb-4 text-gray-900">故事一：一份離職前遞交的改革藍圖</h3>
+                                <p class="text-lg text-slate-700 mb-6">我為一家精密機械製造商的未来所做的診斷與轉型策略</p>
+                                <div class="text-left space-y-4">
+                                    <p><strong class="text-amber-dark">[情境]</strong> 在一家技術領先但管理傳統的精密機械公司任職期間，我敏銳地觀察到，組織的成長動能正被無形的內部問題所侵蝕。</p>
+                                    <p><strong class="text-amber-dark">[行動]</strong> 我利用五個月的時間，自發性地從四大構面（管理、人才、協作、知識）進行了全面的組織診斷。我訪談員工、分析流程，將觀察到的現象與根本原因，彙編成一份完整的《組織效能診斷暨數位化轉型策略藍圖》。報告中，我不僅指出了三大核心挑戰，更提出了一套具體、可執行的三階段轉型計畫。</p>
+                                    <p><strong class="text-amber-dark">[成果]</strong> 這份報告最終呈報給了公司決策層與未來接班人。雖然我選擇離開，但這份藍圖是我『溫和改革者』理念的深刻實踐：即使身處基層，依然能以專業和熱情為組織的未來點亮一盞燈。它證明了我有能力診斷複雜的組織問題，並擘劃出能驅動企業永續成長的宏觀策略。</p>
+                                </div>
+                            </div>
+                            <div class="md:col-span-1 flex items-center justify-center">
+                                <img src="https://i.meee.com.tw/VmKNu1b.png" alt="企管顧問報告書照片" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-white p-6 rounded-lg border text-left">
+                            <p class="text-slate-700">這份報告不僅是對一家公司的診斷，更是我「溫和改革者」理念的具體展現。它證明了即使在傳統體制內，透過系統性分析與宏觀策略思維，依然能由下而上地為組織的未來擘劃清晰的藍圖，並點亮前進的道路。</p>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                                <a href="https://zxc5118690.github.io/interactive-report/" target="_blank" rel="noopener noreferrer" class="inline-block bg-amber-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-amber-dark transition-transform transform hover:scale-105 shadow-lg">
+                                    進入互動式網頁報告
+                                </a>
+                                <a href="https://drive.google.com/file/d/1Yo27dNfvWhEypx-DojTncud2SGcFfO9z/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-200 text-gray-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-300 transition-transform transform hover:scale-105">
+                                    閱覽 PDF 完整報告
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                         <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <h3 class="text-2xl font-bold mb-4 text-gray-900">故事二：一場溫和的寧靜革命</h3>
+                                <p class="text-lg text-slate-700 mb-6">我如何為學生組織重建財務信任</p>
+                                <div class="text-left space-y-4">
+                                    <p><strong class="text-amber-dark">[挑戰]</strong> 當時，全校數十個系學會的財務管理極度混亂，近百萬的學生會費帳目不清，導致學生們的質疑與抱怨四起，組織的信任度降至冰點。</p>
+                                    <p><strong class="text-amber-dark">[行動]</strong> 作為新任議長，我向上爭取校方支持、建立透明的《財務審計標準》與《文件傳遞流程》、並透過持續溫和溝通化解阻力。我始終相信：「會有反抗是正常的，但在大多數狀況下，大家都是希望有個共好的長遠目標。改革，不代表衝突。」</p>
+                                    <p><strong class="text-amber-dark">[成果]</strong> 成功建立起由學生議會作為第三方獨立監管的財務審計機制，一年後反對聲浪明顯減少。這次經歷讓我深刻體會到，真正的領導力是運用同理心去化解恐懼，用清晰的制度來凝聚共識。</p>
+                                </div>
+                            </div>
+                            <div class="md:col-span-1 flex items-center justify-center">
+                                <img src="https://i.meee.com.tw/nHH5QVz.jpg" alt="學生議會照片" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-white p-6 rounded-lg border text-left">
+                            <p class="text-slate-700">這次的經驗不僅是財務制度的重建，更是一次信任的重塑。它印證了我的核心信念：面對混亂與衝突，最有效的方式不是權力的強壓，而是透過建立清晰、公平的系統，並以同理心持續溝通，最終能凝聚共識，帶領團隊走向共好的未來。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Story 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <h3 class="text-2xl font-bold mb-4 text-gray-900">故事三：一場溫暖的知識回饋</h3>
+                                <p class="text-lg text-slate-700 mb-6">當學生為教授們點亮AI的燈塔</p>
+                                <div class="text-left space-y-4">
+                                    <p><strong class="text-amber-dark">[機會]</strong> 我發現碩士時期的指導教授們對日新月異的AI技術相對陌生，而我所掌握的新知識正好可以解決他們在學術研究上的效率痛點。</p>
+                                    <p><strong class="text-amber-dark">[行動]</strong> 這是一次發自內心的回饋。我主動聯繫教授們，花費兩週為他們量身打造「AI工具應用於法學研究」的分享會。會後，我更成為他們信賴的AI諮詢對象，持續提供協助。</p>
+                                    <p><strong class="text-amber-dark">[成果]</strong> 教授們成功跨越技術鴻溝，提升了研究效率。這次經驗帶來的巨大成就感，讓我無比確定「賦能他人」，看見他人因我的分享而成長，就是我渴望投入一生的「志業」。</p>
+                                </div>
+                            </div>
+                            <div class="md:col-span-1 flex items-center justify-center">
+                                <img src="https://i.meee.com.tw/WqPmCDs.png" alt="AI簡報截圖" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-white p-6 rounded-lg border text-left">
+                             <p class="text-slate-700">這不僅僅是一次分享，而是一套完整的賦能系統。我將複雜的AI技術，轉化為法律研究者可以立刻上手的實戰策略，內容涵蓋從工具選擇、進階指令（Prompt）設計，到符合學術倫理規範的全流程解決方案。</p>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <a href="https://drive.google.com/drive/folders/1pwLWIBc-dhdHw-wCUnJ32VhKQ7SBP6yz?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block bg-amber-accent text-white font-bold py-3 px-8 rounded-lg hover:bg-amber-dark transition-transform transform hover:scale-105">
+                                查看完整分享會簡報與講義
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Story 4 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <h3 class="text-2xl font-bold mb-4 text-gray-900">故事四：從追隨者到領航員</h3>
+                                <p class="text-lg text-slate-700 mb-6">一場橫跨多年的營隊文化傳承</p>
+                                <div class="text-left space-y-4">
+                                    <p><strong class="text-amber-dark">[挑戰]</strong> 我所在的志工營隊長期存在一種高壓、強硬的領導文化，團隊的熱情在恐懼中被不斷消耗。</p>
+                                    <p><strong class="text-amber-dark">[行動]</strong> 當我成為總召與顧問時，決心改變這個文化。我用「不高壓、不罵人」的引導與鼓勵取代命令與批評，主動關懷成員狀態，並在傳承時強調核心的「為何」而非僵化的「流程」。我希望自己成為初秋的暖陽，而非泠冽凍人的北風。</p>
+                                    <p><strong class="text-amber-dark">[成果]</strong> 團隊氛圍變得更加溫暖、積極且富有凝聚力。這段旅程讓我深刻理解到，領導力的最高境界，不是掌控一切，而是創造一個能讓他人綻放光芒的舞台。</p>
+                                </div>
+                            </div>
+                            <div class="md:col-span-1 flex items-center justify-center">
+                                <img src="https://i.meee.com.tw/DBaDukz.jpg" alt="議事研習營照片" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-white p-6 rounded-lg border text-left">
+                            <p class="text-slate-700">這段經歷是我「以人為本」領導哲學最深刻的實踐。它證明了真正的領導力並非來自於權威，而是源於創造一個充滿安全感的環境，讓團隊成員的熱情與潛力得以綻放。我相信，溫暖的關懷是激發團隊最強大力量的務實策略。</p>
+                        </div>
+                    </div>
+
+                    <!-- Story 5 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2">
+                                <h3 class="text-2xl font-bold mb-4 text-gray-900">故事五：一場充滿善意的冒險</h3>
+                                <p class="text-lg text-slate-700 mb-6">我如何在菲律賓的島嶼上，為旅人打造文化方舟</p>
+                                <div class="text-left space-y-4">
+                                    <p><strong class="text-amber-dark">[挑戰]</strong> 在菲律賓遊學期間，我發現各國同學對當地旅行社千篇一律的套裝行程感到失望，無法體驗真實文化。</p>
+                                    <p><strong class="text-amber-dark">[行動]</strong> 我將「抱怨」轉化為「改變」的動力，發起免費的文化之旅。我從零開始研究規劃，避開觀光客聚集地，帶領大家深入在地市集、古蹟，並擔任跨文化的溝通橋樑。</p>
+                                    <p><strong class="text-amber-dark">[成果]</strong> 五個月內，我成功帶領超過10次獨特的文化之旅，服務了數十位多國籍同學。雖然活動免費，但我換來了無價的信任、跨國人脈與多元文化視角。這讓我體會到，分享所知、賦能他人，能帶來最純粹的喜悅。</p>
+                                </div>
+                            </div>
+                            <div class="md:col-span-1 flex items-center justify-center">
+                                <img src="https://i.meee.com.tw/kFVz2j6.jpeg" alt="菲律賓帶團照片" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="mt-8 bg-white p-6 rounded-lg border text-left">
+                            <p class="text-slate-700">這趟旅程始於一個簡單的念頭：將他人的抱怨轉化為改變的契機。它展現了我從0到1的規劃與執行能力，以及在跨文化環境中洞察需求、建立連結的熱情。這次經驗讓我體會到，最有價值的創造，往往來自於為他人解決問題的純粹善意。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Core Competencies -->
+        <section id="competencies" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">我的專業能力光譜</h2>
+                <p class="text-center text-slate-600 max-w-2xl mx-auto mb-16">我相信，解決問題的能力，源自於多元能力的有機結合。</p>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Competency 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex justify-center items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">系統性問題解決</h3>
+                        <ul class="text-slate-600 space-y-2">
+                            <li>痛點診斷</li>
+                            <li>制度設計與流程優化</li>
+                            <li>策略分析與提案擬定</li>
+                            <li>第一性原理思考</li>
+                        </ul>
+                    </div>
+                    <!-- Competency 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex justify-center items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">引導式溝通與共識建構</h3>
+                        <ul class="text-slate-600 space-y-2">
+                            <li>審議民主主持</li>
+                            <li>積極聆聽與換位思考</li>
+                            <li>公開演說與簡報</li>
+                            <li>跨部門溝通與協調</li>
+                        </ul>
+                    </div>
+                    <!-- Competency 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex justify-center items-center mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h8a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.707 15.707l-1.414-1.414M16.293 15.707l1.414-1.414M9 11V4l3 3 3-3v7M12 21a9 9 0 110-18 9 9 0 010 18z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">跨文化領導與適應力</h3>
+                        <ul class="text-slate-600 space-y-2">
+                            <li>跨文化團隊領導</li>
+                            <li>在地文化洞察與整合</li>
+                            <li>快速學習與應用能力</li>
+                            <li>危機應變與處理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: My Vision -->
+        <section id="vision" class="py-20 lg:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-900">我的燈塔計畫：為探索者點亮一盞燈</h2>
+                    <p class="text-slate-600 mb-12">在我自己的探索旅程中，曾有前輩像燈塔一樣，為我指引方向。現在，我也希望成為那樣的存在。</p>
+                    
+                    <div class="text-left space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-amber-dark mb-2">我看見的痛點</h3>
+                            <p class="text-slate-700 leading-relaxed">太多充滿潛力的年輕人，在升學或求職的十字路口，因為資訊不對稱、社會壓力，或對未來的不確定感，而做出了讓自己後悔的選擇。這不僅是個人的遺憾，也是社會人才的錯置。</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-amber-dark mb-2">我的構想：「輪調式體驗課程」</h3>
+                            <p class="text-slate-700 leading-relaxed">我希望創建一個專案或平台，它的核心是「體驗先於承諾」。這個計畫將連結學校與不同產業的企業、工作室，提供為期數週到數月的「微型實習」或「專案體驗」。讓學生在正式選擇科系或投入一個行業前，能有機會親身「嚐一嚐」這份工作的真實樣貌，感受這個領域的文化氛圍。</p>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="mt-12 p-6 bg-amber-50 border-l-4 border-amber-500 text-amber-900 rounded-r-lg text-left">
+                        <p class="text-lg italic">"幫助人們在做出重大決定前，擁有更豐富的資訊與更深刻的自我認知，是我認為最有價值的事。"</p>
+                    </blockquote>
+
+                    <div class="mt-12 text-left">
+                        <h3 class="text-xl font-bold text-amber-dark mb-2">終極目標</h3>
+                        <p class="text-slate-700 leading-relaxed">從幫助學生開始，我希望這個「燈塔計畫」能最終擴展到所有在職涯中感到迷惘的成年人，在他們徬徨的時刻，陪伴在旁，提供安心的力量，並一起探索下一步的方向。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact -->
+        <section id="contact" class="py-20 lg:py-32 bg-deep-navy text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-4">讓我們一同創造改變</h2>
+                    <p class="text-gray-300 mb-12">感謝您花時間閱讀我的故事。無論您是正在尋找一位能為團隊帶來新視角的夥伴，或是有一個需要溫和改革的專案，我都非常樂意與您聊聊。</p>
+                    
+                    <div class="bg-navy/50 backdrop-blur-sm rounded-lg p-8 shadow-xl max-w-lg mx-auto border border-slate-700">
+                        <h3 class="text-xl font-bold mb-4">與我聯繫</h3>
+                        <p class="text-gray-300 mb-6">請透過以下 Email 與我聯繫。</p>
+                        <div class="mt-4">
+                            <a href="mailto:zxc5118690@gmail.com" class="text-xl text-amber-accent hover:text-amber-dark hover:underline break-all transition-colors">zxc5118690@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-navy text-white py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2024 Wen-Yu Shen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // JavaScript for active navigation link highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a.nav-link'); // More specific selector
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.4 // 40% of the section must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('nav-link-active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('nav-link-active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
